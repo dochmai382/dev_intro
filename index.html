@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Webcrumbs Plugin</title>
     <style>
       @import url(https://fonts.googleapis.com/css2?family=Lato&display=swap);
-      
+
       @import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
-      
+
       @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200);
-      
+
       /*! tailwindcss v3.4.11 | MIT License | https://tailwindcss.com*/
       *,
       :after,
@@ -26,15 +26,8 @@
       html {
         line-height: 1.5;
         -webkit-text-size-adjust: 100%;
-        font-family:
-          Open Sans,
-          ui-sans-serif,
-          system-ui,
-          sans-serif,
-          Apple Color Emoji,
-          Segoe UI Emoji,
-          Segoe UI Symbol,
-          Noto Color Emoji;
+        font-family: Open Sans, ui-sans-serif, system-ui, sans-serif,
+          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
         font-feature-settings: normal;
         font-variation-settings: normal;
         -moz-tab-size: 4;
@@ -74,15 +67,8 @@
       kbd,
       pre,
       samp {
-        font-family:
-          ui-monospace,
-          SFMono-Regular,
-          Menlo,
-          Monaco,
-          Consolas,
-          Liberation Mono,
-          Courier New,
-          monospace;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          Liberation Mono, Courier New, monospace;
         font-feature-settings: normal;
         font-size: 1em;
         font-variation-settings: normal;
@@ -337,18 +323,17 @@
         --tw-contain-paint: ;
         --tw-contain-style: ;
       }
-      #webcrumbs .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #webcrumbs .mb-4 {
-        margin-bottom: 16px;
-      }
-      #webcrumbs .mb-8 {
-        margin-bottom: 32px;
+      #webcrumbs .relative {
+        position: relative;
       }
       #webcrumbs .mt-2 {
         margin-top: 8px;
+      }
+      #webcrumbs .mt-4 {
+        margin-top: 16px;
+      }
+      #webcrumbs .mt-6 {
+        margin-top: 24px;
       }
       #webcrumbs .block {
         display: block;
@@ -359,26 +344,44 @@
       #webcrumbs .grid {
         display: grid;
       }
+      #webcrumbs .h-\[100px\] {
+        height: 100px;
+      }
+      #webcrumbs .h-\[150px\] {
+        height: 150px;
+      }
       #webcrumbs .h-\[200px\] {
         height: 200px;
+      }
+      #webcrumbs .min-h-\[1200px\] {
+        min-height: 1200px;
+      }
+      #webcrumbs .w-\[100px\] {
+        width: 100px;
       }
       #webcrumbs .w-\[1200px\] {
         width: 1200px;
       }
+      #webcrumbs .w-\[150px\] {
+        width: 150px;
+      }
       #webcrumbs .w-full {
         width: 100%;
       }
-      #webcrumbs .max-w-lg {
-        max-width: 32rem;
+      #webcrumbs .resize-none {
+        resize: none;
       }
-      #webcrumbs .grid-cols-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      #webcrumbs .grid-cols-6 {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+      #webcrumbs .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       #webcrumbs .flex-row {
         flex-direction: row;
+      }
+      #webcrumbs .flex-col {
+        flex-direction: column;
+      }
+      #webcrumbs .flex-wrap {
+        flex-wrap: wrap;
       }
       #webcrumbs .items-center {
         align-items: center;
@@ -392,21 +395,8 @@
       #webcrumbs .gap-6 {
         gap: 24px;
       }
-      #webcrumbs .gap-8 {
-        gap: 32px;
-      }
-      #webcrumbs :is(.space-y-16 > :not([hidden]) ~ :not([hidden])) {
-        --tw-space-y-reverse: 0;
-        margin-bottom: calc(64px * var(--tw-space-y-reverse));
-        margin-top: calc(64px * (1 - var(--tw-space-y-reverse)));
-      }
-      #webcrumbs :is(.space-y-4 > :not([hidden]) ~ :not([hidden])) {
-        --tw-space-y-reverse: 0;
-        margin-bottom: calc(16px * var(--tw-space-y-reverse));
-        margin-top: calc(16px * (1 - var(--tw-space-y-reverse)));
-      }
-      #webcrumbs .overflow-hidden {
-        overflow: hidden;
+      #webcrumbs .self-end {
+        align-self: flex-end;
       }
       #webcrumbs .rounded-lg {
         border-radius: 24px;
@@ -421,17 +411,17 @@
       #webcrumbs .border {
         border-width: 1px;
       }
-      #webcrumbs .border-neutral-200 {
-        --tw-border-opacity: 1;
-        border-color: rgb(224 224 224 / var(--tw-border-opacity));
-      }
       #webcrumbs .border-neutral-300 {
         --tw-border-opacity: 1;
         border-color: rgb(202 202 202 / var(--tw-border-opacity));
       }
-      #webcrumbs .bg-primary-500 {
+      #webcrumbs .bg-neutral-100 {
         --tw-bg-opacity: 1;
-        background-color: rgb(115 65 255 / var(--tw-bg-opacity));
+        background-color: rgb(238 238 238 / var(--tw-bg-opacity));
+      }
+      #webcrumbs .bg-primary {
+        --tw-bg-opacity: 1;
+        background-color: rgb(97 27 248 / var(--tw-bg-opacity));
       }
       #webcrumbs .bg-white {
         --tw-bg-opacity: 1;
@@ -440,18 +430,23 @@
       #webcrumbs .object-cover {
         object-fit: cover;
       }
+      #webcrumbs .p-12 {
+        padding: 48px;
+      }
       #webcrumbs .p-3 {
         padding: 12px;
       }
-      #webcrumbs .p-4 {
-        padding: 16px;
-      }
-      #webcrumbs .p-8 {
-        padding: 32px;
+      #webcrumbs .px-16 {
+        padding-left: 64px;
+        padding-right: 64px;
       }
       #webcrumbs .px-6 {
         padding-left: 24px;
         padding-right: 24px;
+      }
+      #webcrumbs .py-12 {
+        padding-bottom: 48px;
+        padding-top: 48px;
       }
       #webcrumbs .py-3 {
         padding-bottom: 12px;
@@ -461,15 +456,8 @@
         text-align: center;
       }
       #webcrumbs .font-title {
-        font-family:
-          Lato,
-          ui-sans-serif,
-          system-ui,
-          sans-serif,
-          Apple Color Emoji,
-          Segoe UI Emoji,
-          Segoe UI Symbol,
-          Noto Color Emoji;
+        font-family: Lato, ui-sans-serif, system-ui, sans-serif,
+          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
       }
       #webcrumbs .text-2xl {
         font-size: 24px;
@@ -483,11 +471,19 @@
         font-size: 18px;
         line-height: 27px;
       }
-      #webcrumbs .font-semibold {
-        font-weight: 600;
+      #webcrumbs .text-sm {
+        font-size: 14px;
+        line-height: 21px;
+      }
+      #webcrumbs .font-medium {
+        font-weight: 500;
       }
       #webcrumbs .leading-relaxed {
         line-height: 1.625;
+      }
+      #webcrumbs .text-neutral-600 {
+        --tw-text-opacity: 1;
+        color: rgb(127 127 127 / var(--tw-text-opacity));
       }
       #webcrumbs .text-neutral-700 {
         --tw-text-opacity: 1;
@@ -497,13 +493,13 @@
         --tw-text-opacity: 1;
         color: rgb(40 40 40 / var(--tw-text-opacity));
       }
-      #webcrumbs .text-primary-50 {
+      #webcrumbs .text-primary {
         --tw-text-opacity: 1;
-        color: rgb(243 241 255 / var(--tw-text-opacity));
+        color: rgb(97 27 248 / var(--tw-text-opacity));
       }
-      #webcrumbs .text-primary-500 {
+      #webcrumbs .text-primary-950 {
         --tw-text-opacity: 1;
-        color: rgb(115 65 255 / var(--tw-text-opacity));
+        color: rgb(34 1 116 / var(--tw-text-opacity));
       }
       #webcrumbs .shadow-lg {
         --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
@@ -517,13 +513,29 @@
         font-family: Open Sans !important;
         font-size: 16px !important;
       }
-      #webcrumbs :is(.bg-primary-500) {
-        color: hsla(0, 0%, 100%, 0.9) !important;
+      #webcrumbs :is(.bg-neutral-100) {
+        color: rgba(0, 0, 0, 0.9) !important;
       }
-      #webcrumbs .focus\:outline-primary-500:focus {
-        outline-color: #7341ff;
+      #webcrumbs .focus\:outline-none:focus {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
       }
-      
+      #webcrumbs .focus\:ring-2:focus {
+        --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
+          var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+        --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+          calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+          var(--tw-shadow, 0 0 #0000);
+      }
+      #webcrumbs .focus\:ring-primary:focus {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(97 27 248 / var(--tw-ring-opacity));
+      }
+      #webcrumbs .focus\:ring-offset-2:focus {
+        --tw-ring-offset-width: 2px;
+      }
+
       body {
         line-height: inherit;
         padding: 24px;
@@ -538,10 +550,126 @@
     </style>
   </head>
   <body>
-  <div id="webcrumbs">
-undefined
-undefined
-
-  </div>
+    <div id="webcrumbs">
+      <div class="w-[1200px] min-h-[1200px] bg-white shadow-lg rounded-lg">
+        <header class="relative bg-neutral-100 text-neutral-950 rounded-t-lg">
+          <section class="p-12 text-center">
+            <h1 class="text-4xl font-title">John Doe</h1>
+            <p class="text-lg">
+              Crafting beautiful, functional web experiences
+            </p>
+          </section>
+        </header>
+        <main>
+          <section class="py-12 px-16">
+            <h2 class="text-2xl font-title text-primary">About Me</h2>
+            <p class="mt-4 text-neutral-700 leading-relaxed">
+              Hello! I&#x27;m a front-end developer with a knack for building
+              visually engaging and intuitive web interfaces. I specialize in
+              creating responsive, user-centered designs that seamlessly balance
+              form and function.
+            </p>
+          </section>
+          <section class="py-12 px-16 bg-neutral-100">
+            <h2 class="text-2xl font-title text-primary">Skills</h2>
+            <div class="flex gap-6 flex-wrap mt-6">
+              <div class="w-[100px] h-[100px] flex flex-col items-center">
+                <i class="text-4xl text-neutral-600 material-symbols-outlined"
+                  >code</i
+                >
+                <p class="mt-2 text-sm">JavaScript</p>
+              </div>
+              <div class="w-[100px] h-[100px] flex flex-col items-center">
+                <i class="text-4xl text-neutral-600 material-symbols-outlined"
+                  >web</i
+                >
+                <p class="mt-2 text-sm">HTML</p>
+              </div>
+              <div class="w-[100px] h-[100px] flex flex-col items-center">
+                <i class="text-4xl text-neutral-600 material-symbols-outlined"
+                  >palette</i
+                >
+                <p class="mt-2 text-sm">CSS</p>
+              </div>
+              <div class="w-[100px] h-[100px] flex flex-col items-center">
+                <i class="text-4xl text-neutral-600 material-symbols-outlined"
+                  >integration_instructions</i
+                >
+                <p class="mt-2 text-sm">React</p>
+              </div>
+            </div>
+          </section>
+          <section class="py-12 px-16">
+            <h2 class="text-2xl font-title text-primary">Projects</h2>
+            <div class="grid grid-cols-2 gap-6 mt-6">
+              <a href="#" class="block">
+                <img
+                  src="https://tools-api.webcrumbs.org/image-placeholder/450/300/projects/1"
+                  alt="Portfolio Project 1"
+                  class="w-full h-[200px] rounded-md object-cover"
+                />
+                <h3 class="mt-4 text-md font-medium text-neutral-950">
+                  Project 1
+                </h3>
+              </a>
+              <a href="#" class="block">
+                <img
+                  src="https://tools-api.webcrumbs.org/image-placeholder/450/300/projects/2"
+                  alt="Portfolio Project 2"
+                  class="w-full h-[200px] rounded-md object-cover"
+                />
+                <h3 class="mt-4 text-md font-medium text-neutral-950">
+                  Project 2
+                </h3>
+              </a>
+              <a href="#" class="block">
+                <img
+                  src="https://tools-api.webcrumbs.org/image-placeholder/450/300/projects/3"
+                  alt="Portfolio Project 3"
+                  class="w-full h-[200px] rounded-md object-cover"
+                />
+                <h3 class="mt-4 text-md font-medium text-neutral-950">
+                  Project 3
+                </h3>
+              </a>
+              <a href="#" class="block">
+                <img
+                  src="https://tools-api.webcrumbs.org/image-placeholder/450/300/projects/4"
+                  alt="Portfolio Project 4"
+                  class="w-full h-[200px] rounded-md object-cover"
+                />
+                <h3 class="mt-4 text-md font-medium text-neutral-950">
+                  Project 4
+                </h3>
+              </a>
+            </div>
+          </section>
+          <section class="py-12 px-16 bg-neutral-100">
+            <h2 class="text-2xl font-title text-primary">Contact Me</h2>
+            <form class="mt-6 flex flex-col gap-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="border border-neutral-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                class="border border-neutral-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              />
+              <textarea
+                placeholder="Your Message"
+                class="border border-neutral-300 rounded-md p-3 h-[150px] focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 resize-none"
+              ></textarea>
+              <button
+                class="bg-primary text-primary-950 py-3 px-6 rounded-md w-[150px] self-end"
+              >
+                Send
+              </button>
+            </form>
+          </section>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
